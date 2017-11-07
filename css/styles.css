@@ -1,0 +1,106 @@
+/*html {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+body {
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+ul > li:first-child, li:nth-child(2) {
+  text-align: left;
+}*/
+
+.main-header {}
+.main-navigation {}
+.main-header-logo {}
+.site-navigation {}
+.container {}
+.visually-hidden {}
+.container-welcome {}
+.welcome {}
+.gorgeous {}
+.sedona {}
+.sucks {}
+.container-background {}
+.about {}
+.about-slogan {}
+.about-reasons {}
+.features {}
+.features-item {}
+.features-item-blue {}
+.features-title {}
+.features-number {}
+.features-description {}
+.features-item-right {}
+.features-img {}
+.features-icon {}
+.features-grey {}
+.request {}
+.request-question {}
+.request-description {}
+.request-button {}
+.search {}
+.search-data {}
+.search-info {}
+.map {}
+.map-picture {}
+.main-footer {}
+.footer-sedona {}
+.footer-social {}
+.social-button {}
+.footer-copyright {}
+.footer-icon {}
+
+.container-hotels {}
+.filters {}
+.filters-block {}
+.filters-item {}
+.checkbox {}
+.filters-block-display {}
+.filters-cost {}
+.slider {}
+.filters-button {}
+.filters-search {}
+.catalog {}
+.catalog-result {}
+.catalog-sort {}
+.catalog-sort-type {}
+.pointer {}
+.catalog-list {}
+.catalog-item {}
+.catalog-item-image {}
+.catalog-title {}
+.stars {}
+.catalog-category {}
+.catalog-category-type {}
+.booking {}
+.booking-button {}
+
+
+
+
+.catalog {}
+.result {}
+.catalog-sort {}
+.catalog-result {}
+.hotel-price {}
+.hotel-type {}
+.hotel-rate {}
+.pointer-up {}
+.pointer-down {}
+.catalog-list {}
+.catalog-item {}
+.catalog-title {}
+.stars {}
+.catalog-item-image {}
+.catalog-item-category {}
+.catalog-category {}
+.catalog-category-price {}
+.catalog-item-booking {}
+.button {}
+.catalog-rate {}
