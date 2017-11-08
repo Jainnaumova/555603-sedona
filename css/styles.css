@@ -1,11 +1,14 @@
-/*html {
+html {
   margin: 0;
   padding: 0;
 
 }
 
+ul {
+  list-style: none;
+}
 
-body {
+/*body {
   width: 1200px;
   margin: 0 auto;
   border: 1px solid red;
@@ -36,7 +39,7 @@ ul > li:first-child, li:nth-child(2) {
 .features-title {}
 .features-number {}
 .features-description {}
-.features-item-right {}
+.features-right {}
 .features-img {}
 .features-icon {}
 .features-grey {}
@@ -56,22 +59,23 @@ ul > li:first-child, li:nth-child(2) {
 .footer-copyright {}
 .footer-icon {}
 
+
 .container-hotels {}
 .filters {}
 .filters-block {}
 .filters-item {}
+.filters-checkbox {}
 .checkbox {}
 .filters-block-display {}
 .filters-cost {}
-.slider {}
-.filters-button {}
-.filters-search {}
+.filters-slider {}
 .catalog {}
-.catalog-result {}
+.catalog-amount {}
 .catalog-sort {}
 .catalog-sort-type {}
+.catalog-pointer {}
 .pointer {}
-.catalog-list {}
+.catalog-result {}
 .catalog-item {}
 .catalog-item-image {}
 .catalog-title {}
@@ -80,27 +84,6 @@ ul > li:first-child, li:nth-child(2) {
 .catalog-category-type {}
 .booking {}
 .booking-button {}
-
-
-
-
-.catalog {}
-.result {}
-.catalog-sort {}
-.catalog-result {}
-.hotel-price {}
-.hotel-type {}
-.hotel-rate {}
-.pointer-up {}
-.pointer-down {}
-.catalog-list {}
-.catalog-item {}
-.catalog-title {}
-.stars {}
-.catalog-item-image {}
-.catalog-item-category {}
-.catalog-category {}
-.catalog-category-price {}
-.catalog-item-booking {}
-.button {}
+.blue {}
+.brown {}
 .catalog-rate {}

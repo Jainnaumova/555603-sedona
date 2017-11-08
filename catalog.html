@@ -25,107 +25,132 @@
 
       <section class="filters">
         <h1 class="visually-hidden">Выбор гостиницы</h1>
-          <ul class="filters-block">
-            <li class="filters-item">Инфраструктура:</li>
-            <li><input type="checkbox">Бассейн</li>
-            <li><input type="checkbox">Парковка</li>
-            <li><input type="checkbox">Wi-Fi</li>
-          </ul>
-          <ul class="filters-block">
-            <li class="filters-item">Тип жилья</li>
-            <li><input type="checkbox">Гостиница</li>
-            <li><input type="checkbox">Мотель</li>
-            <li><input type="checkbox">Апартаменты</li>
-          </ul>
-          <div class="filters-block-display">
-            <h2 class="filters-item">Стоимость в сутки (Р):</h2>
+          <fieldset class="filters-block">
+            <legend class="filters-item">Инфраструктура:</legend>
+            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Бассейн</span></label>
+            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Парковка</span></label>
+            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Wi-Fi</span></label>
+          </fieldset>
+          <fieldset class="filters-block">
+            <legend class="filters-item">Тип жилья</legend>
+            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Гостиница</span></label>
+            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Мотель</span></label>
+            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Апартаменты</span></label>
+          </fieldset>
+          <fieldset class="filters-block-display">
             <div class="filters-cost">
-              <span class="filters-cost">от 0</span>
-              <span class="filters-cost features-item-right">до 3000</span>
-              <p class="slider"><input type="range"></p>
-              <button class="filters-button">Показать</button>
-              <section class="filters-search">
-                  <!--Здесь должна быть форма поиска-->
-              </section>
+              <p class="filters-item">Стоимость в сутки (Р):</p>
+              <form>
+                <label class="filters-slider"><input type="text" placeholder="от 0"></label>
+                <label class="filters-slider"><input type="text" placeholder="до 3000"></label>
+                <!--Здесь будет бегунок-->
+                <div>
+                  <button type="submit">Показать</button>
+                </div>
+              </form>
             </div>
-          </div>
+          </fieldset>
       </section>
 
-      <section class="catalog">
-          <h2 class="catalog-result">Найдено: 3</h2>
-          <div class="catalog-sort">
-            <h3 class="catalog-sort-title">Сортировка:</h3>
-            <span class="catalog-sort-type">По цене</span>
-            <a href="catalog-item.html">
-              <span class="catalog-sort-type">По типу</span>
-            </a>
-            <a href="catalog-item.html">
-              <span class="catalog-sort-type">По рейтингу</span>
-            </a>
-            <span class="pointer">&#9650;</span>
-            <span class="pointer">&#9660;</span>
-          </div>
-
-          <ul class="catalog-list">
-
-            <li class="catalog-item">
-              <span class="catalog-item-image">
-                <a href="catalog-item.html">
-                  <img src="img/product-1.jpg" width="160" height="120" alt="Amara Resort&Spa">
-                </a>
-              </span>
-              <span class="catalog-title">Amara Resort <span>&#38;</span> Spa</span>
-              <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
-              <p class="catalog-category">
-                <span class="catalog-category-type">Гостиница</span>
-                <span class="catalog-category-type">от 4000 р.</span>
-              </p>
-              <p class="booking">
-                <a href="catalog-item.html">Подробнее</a>
-                <button class="booking-button">Забронировать</button>
-                <span class="catalog-category-type features-grey">Рейтинг: 8.5</span>
-              </p>
+      <div class="catalog">
+        <p class="catalog-amount">Найдено: 3</p>
+        <div class="catalog-sort">
+          <p class="catalog-sort-title">Сортировка:</p>
+            <ul class="catalog-sort-type">
+              <li>По цене</li>
+              <li>
+                <a href="catalog-item.html">По типу</a>
+              </li>
+              <li>
+                <a href="catalog-item.html">По рейтингу</a>
+              </li>
+            </ul>
+        </div>
+        <div class="catalog-pointer">
+          <ul class="pointer">
+            <li>
+              <a href="catalog-item.html">&#9650;</a>
             </li>
-
-            <li class="catalog-item">
-              <span class="catalog-item-image">
-                <a href="catalog-item.html">
-                  <img src="img/product-1.jpg" width="160" height="120" alt="Desert Quail INN">
-                </a>
-              </span>
-              <span class="catalog-title">Desert Quail INN</span>
-              <span class="stars">&#9733;&#9733;&#9733;</span>
-              <p class="catalog-category">
-                <span class="catalog-category-type">Мотель</span>
-                <span class="catalog-category-type">от 3000 р.</span>
-              </p>
-              <p class="booking">
-                <a href="catalog-item.html">Подробнее</a>
-                <button class="booking-button">Забронировать</button>
-                <span class="catalog-category-type features-grey">Рейтинг: 8.9</span>
-              </p>
-            </li>
-
-            <li class="catalog-item">
-              <span class="catalog-item-image">
-                <a href="catalog-item.html">
-                  <img src="img/product-1.jpg" width="160" height="120" alt="Villas at Poco Diablo">
-                </a>
-              </span>
-              <span class="catalog-title">Villas at Poco Diablo</span>
-              <span class="stars">&#9733;&#9733;</span>
-              <p class="catalog-category">
-                <span class="catalog-category-type">Мотель</span>
-                <span class="catalog-category-type">от 3000 р.</span>
-              </p>
-              <p class="booking">
-                <a href="catalog-item.html">Подробнее</a>
-                <button class="booking-button">Забронировать</button>
-                <span class="catalog-category-type features-grey">Рейтинг: 9.2</span>
-              </p>
+            <li>
+              <a href="catalog-item.html">&#9650;</a>
             </li>
           </ul>
-        </section>
+        </div>
+      </div>
+      <div class="catalog-result">
+        <div class="catalog-item-image">
+          <a href="catalog-item.html">
+            <img src="img/product-1.jpg" width="160" height="120" alt="Amara Resort&Spa">
+          </a>
+        </div>
+        <div class="catalog-item">
+          <h2 class="catalog-title">
+            <a href="catalog-item.html">Amara Resort &#38; Spa</a>
+          </h2>
+          <div class="catalog-category">
+            <span class="catalog-category-type">Гостиница</span>
+            <span class="catalog-category-type">от 4000 р.</span>
+          </div>
+          <div class="booking">
+            <button type="button" class="booking-button blue">Подробнее</button>
+            <button type="button" class="booking-button brown">Забронировать</button>
+          </div>
+        </div>
+        <div class="catalog-rate">
+          <div class="stars">4 звезды</div>
+          <div class="catalog-category-type features-grey">Рейтинг: 8.5</div>
+        </div>
+      </div>
+
+      <div class="catalog-result">
+        <div class="catalog-item-image">
+          <a href="catalog-item.html">
+            <img src="img/product-1.jpg" width="160" height="120" alt="Desert Quail INN">
+          </a>
+        </div>
+        <div class="catalog-item">
+          <h2 class="catalog-title">
+            <a href="catalog-item.html">Desert Quail INN</a>
+          </h2>
+          <div class="catalog-category">
+            <span class="catalog-category-type">Мотель</span>
+            <span class="catalog-category-type">от 3000 р.</span>
+          </div>
+          <div class="booking">
+            <button type="button" class="booking-button blue">Подробнее</button>
+            <button type="button" class="booking-button brown">Забронировать</button>
+          </div>
+        </div>
+        <div class="catalog-rate">
+          <div class="stars">3 звезды</div>
+          <div class="catalog-category-type features-grey">Рейтинг: 8.9</div>
+        </div>
+      </div>
+
+      <div class="catalog-result">
+        <div class="catalog-item-image">
+          <a href="catalog-item.html">
+            <img src="img/product-1.jpg" width="160" height="120" alt="Villas at Poco Diablo">
+          </a>
+        </div>
+        <div class="catalog-item">
+          <h2 class="catalog-title">
+            <a href="catalog-item.html">Villas at Poco Diablo</a>
+          </h2>
+          <div class="catalog-category">
+            <span class="catalog-category-type">Апартаменты</span>
+            <span class="catalog-category-type">от 2000 р.</span>
+          </div>
+          <div class="booking">
+            <button type="button" class="booking-button blue">Подробнее</button>
+            <button type="button" class="booking-button brown">Забронировать</button>
+          </div>
+        </div>
+        <div class="catalog-rate">
+          <div class="stars">2 звезды</div>
+          <div class="catalog-category-type features-grey">Рейтинг: 9.2</div>
+        </div>
+      </div>
 
     </main>
 
@@ -147,7 +172,5 @@
       </p>
 
     </footer>
-
-    <sript src="scripts.js"></script>
   </body>
 </html>
