@@ -25,31 +25,31 @@
 
       <section class="filters">
         <h1 class="visually-hidden">Выбор гостиницы</h1>
-          <fieldset class="filters-block">
-            <legend class="filters-item">Инфраструктура:</legend>
-            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Бассейн</span></label>
-            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Парковка</span></label>
-            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Wi-Fi</span></label>
-          </fieldset>
-          <fieldset class="filters-block">
-            <legend class="filters-item">Тип жилья</legend>
-            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Гостиница</span></label>
-            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Мотель</span></label>
-            <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Апартаменты</span></label>
-          </fieldset>
-          <fieldset class="filters-block-display">
-            <div class="filters-cost">
-              <p class="filters-item">Стоимость в сутки (Р):</p>
-              <form>
-                <label class="filters-slider"><input type="text" placeholder="от 0"></label>
-                <label class="filters-slider"><input type="text" placeholder="до 3000"></label>
-                <!--Здесь будет бегунок-->
-                <div>
-                  <button type="submit">Показать</button>
-                </div>
-              </form>
-            </div>
-          </fieldset>
+          <form>
+            <fieldset class="filters-block">
+              <legend class="filters-item">Инфраструктура:</legend>
+              <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Бассейн</span></label>
+              <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Парковка</span></label>
+              <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Wi-Fi</span></label>
+            </fieldset>
+            <fieldset class="filters-block">
+              <legend class="filters-item">Тип жилья</legend>
+              <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Гостиница</span></label>
+              <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Мотель</span></label>
+              <label class="filters-checkbox"><input type="checkbox"><span class="catalog-category-type">Апартаменты</span></label>
+            </fieldset>
+            <fieldset class="filters-block-display">
+              <div class="filters-cost">
+                <p class="filters-item">Стоимость в сутки (Р):</p>
+                  <label class="filters-slider"><span class="catalog-category-type">от</span><input type="number"></label>
+                  <label class="filters-slider"><span class="catalog-category-type">до</span><input type="number"></label>
+                  <!--Здесь будет бегунок-->
+                  <div>
+                    <button type="submit">Показать</button>
+                  </div>
+              </div>
+            </fieldset>
+          </form>
       </section>
 
       <div class="catalog">
@@ -92,12 +92,16 @@
             <span class="catalog-category-type">от 4000 р.</span>
           </div>
           <div class="booking">
-            <button type="button" class="booking-button blue">Подробнее</button>
-            <button type="button" class="booking-button brown">Забронировать</button>
+            <a href="#">
+              <button type="button" class="booking-button blue">Подробнее</button>
+            </a>
+            <a href="#">
+              <button type="button" class="booking-button brown">Забронировать</button>
+            </a>
           </div>
         </div>
         <div class="catalog-rate">
-          <div class="stars">4 звезды</div>
+          <p class="stars">4 звезды</p>
           <div class="catalog-category-type features-grey">Рейтинг: 8.5</div>
         </div>
       </div>
@@ -117,12 +121,16 @@
             <span class="catalog-category-type">от 3000 р.</span>
           </div>
           <div class="booking">
-            <button type="button" class="booking-button blue">Подробнее</button>
-            <button type="button" class="booking-button brown">Забронировать</button>
+            <a href="#">
+              <button type="button" class="booking-button blue">Подробнее</button>
+            </a>
+            <a href="#">
+              <button type="button" class="booking-button brown">Забронировать</button>
+            </a>
           </div>
         </div>
         <div class="catalog-rate">
-          <div class="stars">3 звезды</div>
+          <p class="stars">3 звезды</p>
           <div class="catalog-category-type features-grey">Рейтинг: 8.9</div>
         </div>
       </div>
@@ -142,12 +150,16 @@
             <span class="catalog-category-type">от 2000 р.</span>
           </div>
           <div class="booking">
-            <button type="button" class="booking-button blue">Подробнее</button>
-            <button type="button" class="booking-button brown">Забронировать</button>
+            <a href="#">
+              <button type="button" class="booking-button blue">Подробнее</button>
+            </a>
+            <a href="#">
+              <button type="button" class="booking-button brown">Забронировать</button>
+            </a>
           </div>
         </div>
         <div class="catalog-rate">
-          <div class="stars">2 звезды</div>
+          <p class="stars">2 звезды</p>
           <div class="catalog-category-type features-grey">Рейтинг: 9.2</div>
         </div>
       </div>
