@@ -12,10 +12,10 @@
           <img src="img/logo.png" width="138" height="70" alt="Логотип Sedona»" />
         </a>
         <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="foto.html">Фото и видео</a></li>
-          <li><a href="map.html">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <li><a href="https://echo.htmlacademy.ru">Информация</a></li>
+          <li><a href="https://echo.htmlacademy.ru">Фото и видео</a></li>
+          <li><a href="https://echo.htmlacademy.ru">Карта штата</a></li>
+          <li><a href="https://echo.htmlacademy.ru">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -26,7 +26,7 @@
           <h2 class="welcome">Welcome<span class="gorgeous">-to the gorgeous-</span></h2>
           <p class="sedona">Sedona</p>
           <p class="sucks"><q>Because the Grand Canyon sucks!</q></p>
-          <p class="container-background"><img src="http://placehold.it/150x100" alt="Добро пожаловать в Седону" /></p>
+          <p class="container-background"><img src="img/mountains.jpg" alt="Добро пожаловать в Седону" /></p>
         </div>
 
         <section class="about">
@@ -40,26 +40,29 @@
               <p class="features-number">-№1-</p>
               <p class="features-description">Седона <span>&#8212;</span> не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <div class="features-img"><img src="http://placehold.it/150x100" alt="Вид на городок Седона" /></div>
+            <div class="features-img"><img src="img/sedona-foto.jpg" width="800" height="400" alt="Вид на городок Седона" /></div>
         </section>
 
         <section class="features">
             <div class="features-item features-icon">
               <h4 class="features-title">Жилье</h4>
+              <img src="img/icon-house.svg" alt="Жилье" width="75" height="72">
               <p class="features-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </div>
             <div class="features-item features-icon">
               <h4 class="features-title">Еда</h4>
+              <img src="img/icon-burger.svg" alt="Бургер" width="74" height="70">
               <p class="features-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </div>
             <div class="features-item features-icon">
               <h4 class="features-title">Сувениры</h4>
+              <img src="img/icon-gift.svg" alt="Сувениры" width="64" height="76">
               <p class="features-description">Не только китайского, но и местного производства!</p>
             </div>
         </section>
 
         <section class="features features-right">
-            <div class="features-img"><img src="http://placehold.it/150x100" alt="Вид на мост Дьявола" /></div>
+            <div class="features-img"><img src="img/devil-bridge.jpg" width="800" height="400" alt="Вид на мост Дьявола" /></div>
             <div class="features-item feature-item-blue">
               <h3 class="features-title">Там есть мост Дьявола</h3>
               <p class="features-number">-№2-</p>
@@ -90,27 +93,31 @@
           <p class="request-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <button type="button" class="request-button">Поиск гостиницы в Седоне</button>
           <section class="search">
-            <h3 class="search-data visually-hidden">Форма ввода данных для поиска гостиницы</h3>
+            <h3 class="search-data visually-hidden">Форма для ввода данных по поиску гостиницы</h3>
             <p class="search-info">
 <!--Здесь должна быть форма поиска-->
               <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                 <p class="search-item">
                   Дата заезда:
                   <input class="features-grey" type="text" name="date" value="" placeholder="24 апреля 2017">
+                  <button class="calendar" type="button"><img src="img/calendar.svg" alt="Календарь" /></button>
                 </p>
                 <p class="search-item">
                   Дата выезда:
                   <input class="features-grey" type="text" name="time" value="" placeholder="4 июля 2017">
-                  <button class="calendar" type="button"><img src="http://placehold.it/150x100" alt="Календарь" /></button>
+                  <button class="calendar" type="button"><img src="img/calendar.svg" alt="Календарь" /></button>
                 </p>
-                <p class="appointment-item">
+                <p class="search-item">
                   Взрослые
-                  <input type="text" name="name" value="" placeholder="Борода">
+                  <input type="number" name="adult" value="" placeholder="">
                 </p>
-                <p class="appointment-item">
-                  Телефон
-                  <input type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+                <p class="search-item">
+                  Дети
+                  <input type="number" name="children" value="" placeholder="">
                 </p>
+                <div>
+                  <button type="submit">Найти</button>
+                </div>
               </form>
             </p>
           </section>
@@ -118,7 +125,7 @@
 
         <section class="map">
           <h2 class="visually-hidden">Карта проезда</h2>
-          <p class="map-picture"><img src="http://placehold.it/150x100" alt="Карта проезда" /></p>
+          <p class="map-picture"><img src="img/map.jpg" width="1718" height="748" alt="Карта проезда"></p>
         </section>
 
     </main>
@@ -130,14 +137,14 @@
       </p>
 
       <ul class="footer-social">
-        <li><a class="social-button" href="#">Вконтакте</a></li>
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
+        <li><a class="social-button" href="#"><img src="img/twitter.svg" width="17" height="15" alt="Твиттер"></a></li>
+        <li><a class="social-button" href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a></li>
+        <li><a class="social-button" href="#"><img src="img/yuotube.svg" width="20" height="16" alt="Ютуб"></a></li>
       </ul>
 
       <p class="footer-copyright">
         <b>Website by</b>
-        <a class="footer-icon" href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="footer-icon" href="https://htmlacademy.ru"><img src="img/logo_name.svg" width="115" height="41" alt="HTML academy"></a>
       </p>
 
     </footer>

@@ -56,12 +56,18 @@ ul > li:first-child, li:nth-child(2) {
 .search {}
 .search-data {}
 .search-info {}
+.search-form {}
+.search-item {}
+.calendar {}
+
+
 .map {}
 .map-picture {}
 .main-footer {}
 .footer-sedona {}
 .footer-social {}
-.social-button {}
+.social-button {
+}
 .footer-copyright {}
 .footer-icon {}
 
