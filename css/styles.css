@@ -55,9 +55,16 @@ ul > li:first-child, li:nth-child(2) {
 .request-button {}
 .search {}
 .search-data {}
-.search-info {}
 .search-form {}
 .search-item {}
+.search-item-date-in {}
+.search-item-date-out {}
+.search-item-visitors {}
+.search-item-adult {}
+.search-item-children {}
+.search-item-adult-amount {}
+.search-item-children-amount {}
+.search-button {}
 .calendar {}
 
 
