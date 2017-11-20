@@ -3,20 +3,59 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet" >
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        padding: 10px;
+        font-family: "PT Sans", Arial, sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      main {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        margin: 20px 0;
+        padding: 0;
+        list-style: none;
+      }
+      h1 {
+        margin: 36px 0;
+        font-size: 36px;
+        line-height: 42px;
+      }
+      h2 {
+        margin: 24px 0;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      h3 {
+        margin: 18px 0;
+        font-size: 18px;
+        line-height: 20px;
+      }
+    </style>
   </head>
   <body>
 
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
-          <img src="img/logo.png" width="138" height="70" alt="Логотип Sedona»">
+          <img src="img/logo.png" width="138" height="70" alt="Логотип Sedona">
         </a>
         <ul class="site-navigation">
-          <li><a href="https://echo.htmlacademy.ru">Информация</a></li>
-          <li><a href="https://echo.htmlacademy.ru">Фото и видео</a></li>
-          <li><a href="https://echo.htmlacademy.ru">Карта штата</a></li>
-          <li><a href="https://echo.htmlacademy.ru">Гостиницы</a></li>
+          <li class="left"><a href="https://echo.htmlacademy.ru">Информация</a></li>
+          <li class="left"><a href="https://echo.htmlacademy.ru">Фото и видео</a></li>
+          <li class="right"><a href="https://echo.htmlacademy.ru">Карта штата</a></li>
+          <li class="right"><a href="https://echo.htmlacademy.ru">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -71,11 +110,11 @@
             <fieldset class="filters-block-display">
               <div class="filters-cost">
                 <p class="filters-item">Стоимость в сутки (Р):</p>
-                  <label class="filters-slider"><span class="catalog-category-type">от</span><input type="number" name="from"></label>
-                  <label class="filters-slider"><span class="catalog-category-type">до</span><input type="number" name="to"></label>
+                  <label class="filters-slider"><span class="catalog-category-type">от</span><input class="catalog-category-type" type="number" name="from" placeholder="от 0"></label>
+                  <label class="filters-slider"><span class="catalog-category-type">до</span><input class="catalog-category-type" type="number" name="to" placeholder="до 3000"></label>
                   <!--Здесь будет бегунок-->
                   <div>
-                    <button type="submit">Показать</button>
+                    <button class="catalog-category-type" type="submit">Показать</button>
                   </div>
               </div>
             </fieldset>
@@ -110,7 +149,7 @@
       <div class="catalog-result">
         <div class="catalog-item-image">
           <a href="catalog-item.html">
-            <img src="img/amara-resort.jpg" width="135" height="90" alt="Amara Resort&Spa">
+            <img src="img/amara-resort1.jpg" width="135" height="90" alt="Amara Resort&Spa">
           </a>
         </div>
         <div class="catalog-item">
@@ -118,12 +157,16 @@
             <a href="catalog-item.html">Amara Resort &#38; Spa</a>
           </h2>
           <div class="catalog-category">
-            <span class="catalog-category-type">Гостиница</span>
-            <span class="catalog-category-type">от 4000 р.</span>
+            <span class="catalog-category-description">Гостиница</span>
+            <span class="catalog-category-description">от 4000 р.</span>
           </div>
           <div class="booking">
-            <a href="#" class="booking-button blue">Подробнее</a>
-            <a href="#" class="booking-button brown">Забронировать</a>
+            <div class="booking-button-blue">
+              <a href="#" class="booking-button blue">Подробнее</a>
+            </div>
+            <div class="booking-button-brown">
+              <a href="#" class="booking-button brown">Забронировать</a>
+            </div>
           </div>
         </div>
         <div class="catalog-rate">
@@ -133,14 +176,14 @@
             <img src="img/star.svg" width="18" height="17" alt="Звезда">
             <img src="img/star.svg" width="18" height="17" alt="Звезда">
           </p>
-          <div class="catalog-category-type features-grey">Рейтинг: 8.5</div>
+          <div class="catalog-category-description features-item-grey">Рейтинг: 8.5</div>
         </div>
       </div>
 
       <div class="catalog-result">
         <div class="catalog-item-image">
           <a href="catalog-item.html">
-            <img src="img/desert-quail.jpg" width="135" height="90" alt="Desert Quail INN">
+            <img src="img/desert-quail1.jpg" width="135" height="90" alt="Desert Quail INN">
           </a>
         </div>
         <div class="catalog-item">
@@ -148,12 +191,16 @@
             <a href="catalog-item.html">Desert Quail INN</a>
           </h2>
           <div class="catalog-category">
-            <span class="catalog-category-type">Мотель</span>
-            <span class="catalog-category-type">от 3000 р.</span>
+            <span class="catalog-category-description">Мотель</span>
+            <span class="catalog-category-description">от 3000 р.</span>
           </div>
           <div class="booking">
-            <a href="#" class="booking-button blue">Подробнее</a>
-            <a href="#" class="booking-button brown">Забронировать</a>
+            <div class="booking-button-blue">
+              <a href="#" class="booking-button blue">Подробнее</a>
+            </div>
+            <div class="booking-button-brown">
+              <a href="#" class="booking-button brown">Забронировать</a>
+            </div>
           </div>
         </div>
         <div class="catalog-rate">
@@ -162,14 +209,14 @@
             <img src="img/star.svg" width="18" height="17" alt="Звезда">
             <img src="img/star.svg" width="18" height="17" alt="Звезда">
           </p>
-          <div class="catalog-category-type features-grey">Рейтинг: 8.9</div>
+          <div class="catalog-category-description features-item-grey">Рейтинг: 8.9</div>
         </div>
       </div>
 
       <div class="catalog-result">
         <div class="catalog-item-image">
           <a href="catalog-item.html">
-            <img src="img/villas-at-poco.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+            <img src="img/villas-at-poco1.jpg" width="135" height="90" alt="Villas at Poco Diablo">
           </a>
         </div>
         <div class="catalog-item">
@@ -177,12 +224,16 @@
             <a href="catalog-item.html">Villas at Poco Diablo</a>
           </h2>
           <div class="catalog-category">
-            <span class="catalog-category-type">Апартаменты</span>
-            <span class="catalog-category-type">от 2000 р.</span>
+            <span class="catalog-category-description">Апартаменты</span>
+            <span class="catalog-category-description">от 2000 р.</span>
           </div>
           <div class="booking">
-            <a href="#" class="booking-button blue">Подробнее</a>
-            <a href="#" class="booking-button brown">Забронировать</a>
+            <div class="booking-button-blue">
+              <a href="#" class="booking-button blue">Подробнее</a>
+            </div>
+            <div class="booking-button-brown">
+              <a href="#" class="booking-button brown">Забронировать</a>
+            </div>
           </div>
         </div>
         <div class="catalog-rate">
@@ -190,7 +241,7 @@
             <img src="img/star.svg" width="18" height="17" alt="Звезда">
             <img src="img/star.svg" width="18" height="17" alt="Звезда">
           </p>
-          <div class="catalog-category-type features-grey">Рейтинг: 9.2</div>
+          <div class="catalog-category-description features-item-grey">Рейтинг: 9.2</div>
         </div>
       </div>
 
