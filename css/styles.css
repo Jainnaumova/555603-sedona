@@ -17,11 +17,46 @@ body {
   background-color: #ffffff;
   background-position: top center;
 }
-
+/*
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  margin: 0; /* Removes leftover margin */
+  margin: 0;
+}
+*/
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+  }
+  h1 {
+    margin: 36px 0;
+    font-size: 36px;
+    line-height: 42px;
+  }
+  h2 {
+    margin: 24px 0;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  h3 {
+    margin: 18px 0;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+
+  /* Removes leftover margin */
 }
 
 /*body {
@@ -36,13 +71,21 @@ ul > li:first-child, li:nth-child(2) {
 a {
   text-decoration: none;
 }
+
+a:hover, a:visited, a:active a:focus {
+    text-decoration: none;
+}
+
 .main-header a {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-
 }
+.main-header {
+  color: #000000;
 
+  background-color: #ffffff;
+}
 .button {
   font: inherit;
 
@@ -60,18 +103,28 @@ a {
 
 .site-navigation a {
   color: #000000;
+  text-decoration: none;
 }
 .site-navigation a:hover {
   color: #81b3d2;
-}
-
-site-navigation a:focus {
-  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
 }
 
 .site-navigation a:active {
-  color: #766357;
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
 }
+/*не работает класс цвета активного состояния кнопки*/
+.active {
+  color: #766357;
+  text-decoration: none;
+}
+/*не работает класс цвета активного состояния кнопки*/
+.active-sort {
+  color: #81b3d2;
+
+}
+
 .request button:hover {
   color: #ffffff;
 
@@ -131,6 +184,7 @@ site-navigation a:focus {
 
   background-color: rgba(235, 235, 235, 0);
 }
+/* Состояние календаря */
 
 .search-item-adult-amount input:hover {
   color: #000000;
@@ -203,7 +257,22 @@ site-navigation a:focus {
   background-color: #5496bd;
 }
 
-.catalog-sort-type li:active {
+/*не работает псевдокласс для состояния нажатия кнопки*/
+.catalog-sort-type a:active {
+  color: #000000;
+}
+/*не работает псевдокласс для состояния нажатия кнопки*/
+
+
+.catalog-sort-type a:hover {
+  color: #81b3d2;
+  text-decoration: underline dashed #81b3d2;
+
+  background-color: #ffffff;
+}
+
+
+/*.catalog-sort-type li:active {
   color: #81b3d2;
   text-decoration: underline dashed #81b3d2;
 
@@ -219,48 +288,32 @@ site-navigation a:focus {
   color: #000000;
 
   background-color: #ffffff;
-}
-.catalog-sort-type a:active {
-  color: #81b3d2;
-  text-decoration: underline dashed #81b3d2;
+}*/
 
-  background-color: #ffffff;
-}
-.catalog-sort-type a:hover {
-  color: #81b3d2;
-  text-decoration: underline dashed #81b3d2;
-
-  background-color: #ffffff;
-}
-
-.catalog-sort-type a:focus {
-  color: #000000;
-
-  background-color: #ffffff;
-}
 
 .catalog-title a {
   color: #000000;
+  text-decoration: none;
 
-  background-color: #ffffff;
 }
 
 .catalog-title a:hover {
   color: #81b3d2;
+  text-decoration: none;
 
   background-color: #ffffff;
 }
 
 .catalog-title a:focus {
   color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
 
   background-color: #ffffff;
 }
 
 .booking-button-blue a {
   color: #ffffff;
-
-  background-color: #81b3d2;
+  text-decoration: none;
 }
 
 .booking-button-blue a:hover {
@@ -277,8 +330,7 @@ site-navigation a:focus {
 
 .booking-button-brown a {
   color: #ffffff;
-
-  background-color: #766357;
+  text-decoration: none;
 }
 
 .booking-button-brown a:hover {
@@ -297,29 +349,30 @@ site-navigation a:focus {
 .main-header-logo {}
 .site-navigation a {
   color: #000000;
-
-  background-color: #ffffff;
 }
 .site-navigation-active a {
   color: #766357;
-
-  background-color: #ffffff;
 }
 
 .footer-sedona a {
   color: #000000;
+  text-decoration: none;
+}
 
-  background-color: #ffffff;
+.footer-social a {
+  text-decoration: none;
 }
 
 .footer-social a:hover {
   color: #ffffff;
+  text-decoration: none;
 
   background-color: #669ec0;
 }
 
 .footer-social a:focus {
-  rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
 
   background-color: #5496bd;
 }
@@ -584,9 +637,8 @@ site-navigation a:focus {
   font-size: 12px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline dashed #81b3d2;
   list-style: none;
-
-  background-color: #ffffff;
 }
 .catalog-pointer {
   text-align: right;
@@ -603,8 +655,6 @@ site-navigation a:focus {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
-
-  background-color: #ffffff;
 }
 .stars {}
 .catalog-category {}

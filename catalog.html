@@ -5,47 +5,9 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="./css/normalize.css" rel="stylesheet">
-    <link href="./css/styles.css" rel="stylesheet" >
-    <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        padding: 10px;
-        font-family: "PT Sans", Arial, sans-serif;
-        font-size: 16px;
-        line-height: 20px;
-      }
-      main {
-        margin: 0;
-        padding: 0;
-      }
-      ul {
-        margin: 20px 0;
-        padding: 0;
-        list-style: none;
-      }
-      h1 {
-        margin: 36px 0;
-        font-size: 36px;
-        line-height: 42px;
-      }
-      h2 {
-        margin: 24px 0;
-        font-size: 24px;
-        line-height: 28px;
-      }
-      h3 {
-        margin: 18px 0;
-        font-size: 18px;
-        line-height: 20px;
-      }
-    </style>
+    <link href="./css/styles.css" rel="stylesheet">
   </head>
   <body>
-
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
@@ -55,13 +17,12 @@
           <li class="left"><a href="https://echo.htmlacademy.ru">Информация</a></li>
           <li class="left"><a href="https://echo.htmlacademy.ru">Фото и видео</a></li>
           <li class="right"><a href="https://echo.htmlacademy.ru">Карта штата</a></li>
-          <li class="right"><a href="https://echo.htmlacademy.ru">Гостиницы</a></li>
+          <li class="right"><a class="active" href="https://echo.htmlacademy.ru">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="container-hotels">
-
       <section class="filters">
         <h1 class="visually-hidden">Выбор гостиницы</h1>
           <form action="https://echo.htmlacademy.ru" method="get">
@@ -126,7 +87,7 @@
         <div class="catalog-sort">
           <p class="catalog-sort-title">Сортировка:</p>
             <ul class="catalog-sort-type">
-              <li>По цене</li>
+              <li class="active-sort">По цене</li>
               <li>
                 <a href="catalog-item.html">По типу</a>
               </li>
@@ -149,7 +110,7 @@
       <div class="catalog-result">
         <div class="catalog-item-image">
           <a href="catalog-item.html">
-            <img src="img/amara-resort1.jpg" width="135" height="90" alt="Amara Resort&Spa">
+            <img src="img/amara-resort.jpg" width="135" height="90" alt="Amara Resort&Spa">
           </a>
         </div>
         <div class="catalog-item">
@@ -183,7 +144,7 @@
       <div class="catalog-result">
         <div class="catalog-item-image">
           <a href="catalog-item.html">
-            <img src="img/desert-quail1.jpg" width="135" height="90" alt="Desert Quail INN">
+            <img src="img/desert-quail.jpg" width="135" height="90" alt="Desert Quail INN">
           </a>
         </div>
         <div class="catalog-item">
@@ -216,7 +177,7 @@
       <div class="catalog-result">
         <div class="catalog-item-image">
           <a href="catalog-item.html">
-            <img src="img/villas-at-poco1.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+            <img src="img/villas-at-poco.jpg" width="135" height="90" alt="Villas at Poco Diablo">
           </a>
         </div>
         <div class="catalog-item">
