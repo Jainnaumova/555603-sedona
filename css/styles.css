@@ -1,9 +1,18 @@
 html {
   margin: 0;
   padding: 0;
-
+  box-sizing: border-box;
 }
+/*свойство будет распространятся на все элементы*/
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
+  width: 1200px;
   margin: 0;
   padding: 0;
 
@@ -69,8 +78,6 @@ a:hover, a:visited, a:active a:focus {
 .catalog-sort-type {
   list-style: none;
 }
-
-
 
 .site-navigation a {
   color: #000000;
@@ -367,7 +374,9 @@ a:hover, a:visited, a:active a:focus {
 
 
 
-.container {}
+.container {
+position: relative;
+}
 /* Невидимый класс */
 .visually-hidden {
   position: absolute;
@@ -382,19 +391,37 @@ a:hover, a:visited, a:active a:focus {
   overflow: hidden;
 }
 
-.container-welcome {}
+/*Фоновое изображение с маской*/
+.container-welcome {
+  background-color #9ebcd4;
+  background:
+  /*url("../img/maska.png") no-repeat bottom,*/
+  url("../img/mountains.jpg") no-repeat top center;
+  background-repeat: no-repeat;
+  background-size: 1200px 527px;
+  text-align: center;
+  padding-top: 57px;
+}
+
+.container-background .welcome-sedona {
+  width: 458px;
+  height: 352px;
+}
 .welcome {}
 .gorgeous {}
 .sedona {}
 .sucks {}
-/* Фоновое изображение с маской
-.container-background {
-  background:
-  url(../img/maska.jpg) no-repeat 100% 100%,
-  url(../img/mountains.jpg) no-repeat 100% 100%;
-  background-color #9ebcd4;
+
+
+.maska {
+  background: url("../img/maska.png") no-repeat;
+  min-height: 58px;
+  min-width: 100%;
+  position: absolute;
+  top: 357px;
+  background-size: cover;
 }
-*/
+
 .about {
   text-align: center;
 
