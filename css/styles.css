@@ -395,12 +395,12 @@ position: relative;
 .container-welcome {
   background-color #9ebcd4;
   background:
-  /*url("../img/maska.png") no-repeat bottom,*/
-  url("../img/mountains.jpg") no-repeat top center;
-  background-repeat: no-repeat;
-  background-size: 1200px 527px;
+  url("../img/maska.png") no-repeat 0 100%,
+  url("../img/mountains.jpg") no-repeat 50% -56px;
+  background-size: 100% auto cover;
   text-align: center;
   padding-top: 57px;
+  min-height: 508px;
 }
 
 .container-background .welcome-sedona {
@@ -412,15 +412,6 @@ position: relative;
 .sedona {}
 .sucks {}
 
-
-.maska {
-  background: url("../img/maska.png") no-repeat;
-  min-height: 58px;
-  min-width: 100%;
-  position: absolute;
-  top: 357px;
-  background-size: cover;
-}
 
 .about {
   text-align: center;
