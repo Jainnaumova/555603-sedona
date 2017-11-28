@@ -26,13 +26,27 @@ body {
   background-color: #ffffff;
   background-position: top center;
 }
-/*
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-*/
+input[type=number]::-moz-inner-spin-button,
+input[type=number]::-moz-outer-spin-button {
+  -moz-appearance: none;
+  margin: 0;
+}
+input[type=number]::-ms-inner-spin-button,
+input[type=number]::-ms-outer-spin-button {
+  -ms-appearance: none;
+  margin: 0;
+}
+input[type=number]::-o-inner-spin-button,
+input[type=number]::-o-outer-spin-button {
+  -o-appearance: none;
+  margin: 0;
+}
   html {
     margin: 0;
     padding: 0;
@@ -248,30 +262,6 @@ a:hover, a:visited, a:active a:focus {
   text-decoration: none;
 }
 
-
-
-
-
-
-/*.catalog-sort-type li:active {
-  color: #81b3d2;
-  text-decoration: underline dashed #81b3d2;
-
-  background-color: #ffffff;
-}
-.catalog-sort-type li:hover {
-  color: #81b3d2;
-  text-decoration: underline dashed #81b3d2;
-
-  background-color: #ffffff;
-}
-.catalog-sort-type li:focus {
-  color: #000000;
-
-  background-color: #ffffff;
-}*/
-
-
 .catalog-title a {
   font-size: 21px;
   line-height: 26px;
@@ -340,6 +330,7 @@ a:hover, a:visited, a:active a:focus {
 }
 
 .footer-social a {
+  font-size: 0;
   text-decoration: none;
 }
 
@@ -388,7 +379,7 @@ position: relative;
   background:
   url("../img/maska.png") no-repeat 0 100%,
   url("../img/mountains.jpg") no-repeat 50% -56px;
-  background-size: 100% auto cover;
+  background-size: 100% auto, cover;
   text-align: center;
   padding-top: 57px;
   min-height: 508px;
@@ -406,12 +397,10 @@ position: relative;
 
 
 .about {
-  width: 1200px;
   min-height: 216px;
   text-align: center;
   padding-top: 62px;
-
-  background-color: #ffffff;
+  padding-bottom: 58px;
 }
 .about-slogan {
   font-size: 21px;
@@ -421,7 +410,7 @@ position: relative;
   margin-bottom: 40px;
 }
 .about-reasons {
-  padding-bottom: 58px;
+
   color: #333333;
 }
 .features {
@@ -429,11 +418,12 @@ position: relative;
   align-items: center;
   text-align: center;
 
-  /*padding-top: 1px;*/
 }
 .features-item {
-  width: 396px;
+  width: 400px;
   min-height: 256px;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 .features-item-blue {
 
@@ -442,18 +432,26 @@ position: relative;
 .features-title {
   font-size: 21px;
   font-weight: 700;
-  padding-top: 50px;
-  padding-left: 120px;
-  padding-right: 120px;
-  padding-bottom: 30px;
+  padding-left: 121px;
+  padding-right: 121px;
+  margin-bottom: 30px;
 }
 .features-number {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 .features-description {
   color: #333333;
-  padding-left: 57px;
-  padding-right: 57px;
+  padding-left: 49px;
+  padding-right: 49px;
+}
+
+.padding-58 {
+  padding-left: 58px;
+  padding-right: 58px;
+}
+.padding-60 {
+  padding-left: 60px;
+  padding-right: 60px;
 }
 .features-right {}
 .features-img {
@@ -467,35 +465,41 @@ position: relative;
   background-color: #c8d1bf;
 }
 .features .features-icon {
-  padding-top: 60px;
-  padding-bottom: 32px;
+  padding-top: 50px;
+  padding-bottom: 75px;
   min-height: 330px;
   background-color: #ffffff;
+}
+.features .padding-45 {
+  padding-top: 45px;
+}
+.features .features-icon img{
+  margin-bottom: 32px;
 }
 .features-item-grey {
   background-color: #eeeeee;
 }
 
 
-/*куда поставить паддинг для нижеследующего блока с формой поиска*/
+
+
 .request {
   text-align: center;
   background-color: #ffffff;
-  /*padding-bottom: 56px;*/
+  padding-top: 56px;
 }
 .request-question {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  padding-top: 56px;
-  padding-bottom: 38px;
+  margin-bottom: 38px;
 }
 .request-description {
   line-height: 24px;
   color: #333333;
-  padding-left: 393px;
-  padding-right: 393px;
-  padding-bottom: 54px;
+  padding-left: 378px;
+  padding-right: 378px;
+  margin-bottom: 54px;
 }
 .request-button {
   font: inherit;
@@ -630,7 +634,7 @@ position: relative;
 }
 .main-footer {
   display: flex;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
   align-items: center;
   min-height: 120px;
 
@@ -643,7 +647,7 @@ position: relative;
 }
 .footer-social {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   list-style: none;
   text-align: center;
@@ -659,6 +663,7 @@ position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 400px;
   text-align: right;
 }
 .footer-text {
@@ -753,15 +758,11 @@ position: relative;
 /*Flex-контейнеры*/
 
 .wrapper {
-  width: 1280px;
+  width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
-  background-color: #e7e7e7;
-  /*box-shadow:
-  0 1px 4px rgba(0, 0, 0, .3),
-  -23px 0 20px -23px rgba(0, 0, 0, .8),
-  23px 0 20px -23px rgba(0, 0, 0, .8),
-  0 0 40px rgba(0, 0, 0, .1) inset;*/
+  background-color: #ffffff;
+  box-shadow:
+  0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-header {
