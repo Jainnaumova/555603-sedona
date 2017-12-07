@@ -57,7 +57,7 @@ input[type=number]::-o-outer-spin-button {
     padding: 0;
   }
   ul {
-    margin: 20px 0;
+    margin: 0;
     padding: 0;
     list-style: none;
   }
@@ -112,6 +112,7 @@ a:hover, a:visited, a:active a:focus {
 
 .active-sort {
   color: #81b3d2;
+  width: 82px;
 }
 
 .request button:hover {
@@ -270,40 +271,6 @@ a:hover, a:visited, a:active a:focus {
   text-decoration: none;
 
   background-color: #ffffff;
-}
-
-.booking-button-blue a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.booking-button-blue a:hover {
-  color: #ffffff;
-
-  background-color: #669ec0;
-}
-
-.booking-button-blue a:focus {
-  color: rgba(255, 255, 255, 0.3);
-
-  background-color: #5496bd;
-}
-
-.booking-button-brown a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.booking-button-brown a:hover {
-  color: #ffffff;
-
-  background-color: #604e43;
-}
-
-.booking-button-brown a:focus {
-  color: rgba(255, 255, 255, 0.3);
-
-  background-color: #503e33;
 }
 
 .main-navigation {}
@@ -763,7 +730,7 @@ input:focus + label {
 .filters-checkbox svg:hover {
   fill: #ffffff;
 }
-.filters-checkbox svg:active {
+.filters-checkbox svg:active{
   fill: #6a6a6a;
 }
 .checkbox {}
@@ -815,31 +782,65 @@ input:focus + label {
 .filter-range {
 
 }
-.catalog {}
+/*флексы для сортировки*/
+
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 71px;
+  margin-bottom: 33px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 33px
+}
+.flex-catalog {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 590px;
+}
 .catalog-amount {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  width: 165px;
+
+
 }
-.catalog-sort {}
+.catalog-sort {
+  display: flex;
+  align-items: center;
+
+}
 .catalog-sort-title {
   font-size: 12px;
   line-height: 18px;
+  width: 115px;
 }
 .catalog-sort-type {
+  display: flex;
+  justify-content: flex-start;
   font-size: 12px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
   list-style: none;
 }
-
+.catalog-sort-type li {
+  width: 82px;
+}
 /*Переопределение сортировки по убыванию и возрастанию*/
 .catalog-pointer {
   text-align: right;
+  padding-right: 73px;
 }
 .pointer {
+  display: flex;
+  align-items: center;
   font-size: 0;
   list-style: none;
+}
+.pointer li:first-child {
+  padding-right: 12px;
 }
 .pointer > li svg {
   fill: rgba(0, 0, 0, 0.3);
@@ -851,27 +852,70 @@ input:focus + label {
   fill: #81b3d2;
 }
 /*не работает*/
-.pointer .active {
+.pointer.active {
   color: #81b3d2;
 }
 
+/*Флексы для карточек товаров*/
 
+.flex-catalog-result {
+  display: flex;
+  justify-content:space-between;
+  padding: 0px;
+  min-height: 90px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 23px;
+}
+.catalog-result div:nth-child(3){
+  margin-bottom: 6px;
+}
+.flex-catalog-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 72px;
+  min-height: 90px;
+}
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+.catalog-title {
 
-
-
-
-
-.catalog-result {}
-.catalog-item {}
-.catalog-item-image {}
-
-.stars {}
-.catalog-category {}
-.catalog-category-description {
-  color: #333333;
-  text-align: left;
+}
+.catalog-item-image {
+  padding: 0px;
+  padding-right: 30px;
+  margin: 0;
 }
 
+.stars {
+  margin-bottom: 40px;
+}
+.catalog-category {
+  display: flex;
+  width: 258px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.catalog-category-description {
+  display: flex;
+  align-items: center;
+  color: #333333;
+  text-align: left;
+  width: 110px;
+  min-height: 27px;
+}
+.item-cost {
+  width: 142px;
+  text-align: left;
+}
+.catalog-rate div {
+  padding-left: 15px;
+}
 .catalog-category-type {
   color: #ffffff;
   text-transform: uppercase;
@@ -879,12 +923,60 @@ input:focus + label {
 
   background-color: rgba(0, 0, 0, 0);
 }
-.booking {}
-.booking-button {
-  font-weight: 700;
-  color: #ffffff;
-  text-align: center;
+
+.booking {
+  display: flex;
+  width: 258px;
+  justify-content: space-between;
+
 }
+
+.booking-button-blue > a:link {
+  width: 110px;
+  min-height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #81b3d2;
+  color: #fff;
+}
+
+.booking-button-blue a:visited {
+  background-color: #81b3d2;
+  color: #fff;
+}
+.booking-button-blue a:hover {
+  background-color: #669ec0;
+}
+.booking-button-blue a:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd
+}
+
+
+
+.booking-button-brown > a:link {
+  width: 142px;
+  min-height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #766357;
+  color: #fff;
+}
+
+.booking-button-brown a:visited {
+  background-color: #766357;
+  color: #fff;
+}
+.booking-button-brown a:hover {
+  background-color: #604e43;
+}
+.booking-button-brown a:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
 .blue {
   background-color: #81b3d2;
 }
@@ -893,6 +985,8 @@ input:focus + label {
 }
 .catalog-rate {
   text-align: right;
+  padding: 0px;
+  padding-right: 73px;
 }
 
 /*Бегунок*/
