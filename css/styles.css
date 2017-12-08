@@ -220,13 +220,13 @@ a:hover, a:visited, a:active a:focus {
   background-color: rgba(235, 235, 235, 0);
 }
 
-.submit-button button:hover {
+.submit-button:hover {
   color: #ffffff;
   background-color: #669ec0;
 }
 
 
-.submit-button button:focus {
+.submit-button:focus {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #5496bd;
@@ -357,8 +357,9 @@ position: relative;
 .about-slogan {
   font-size: 21px;
   line-height: 26px;
-  padding-left: 380px;
-  padding-right: 376px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
 }
 .about-reasons {
@@ -446,8 +447,9 @@ position: relative;
 .request-description {
   line-height: 24px;
   color: #333333;
-  padding-left: 378px;
-  padding-right: 378px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 54px;
 }
 .request-button {
@@ -465,11 +467,14 @@ position: relative;
 }
 .search {
   position: absolute;
-  width: 566px;
+  width: 568px;
   background: #fff;
 
   left: 316px;
   padding-top: 53px;
+  padding-bottom: 54px;
+  padding-right: 53px;
+  padding-left: 53px;
 }
 .search-data {
 
@@ -566,10 +571,8 @@ position: relative;
   width: 42px;
   min-height: 38px;
 }
+
 .submit-button {
-  margin-bottom: 54px;
-}
-.submit-button-search {
   font: inherit;
   font-size: 21px;
   line-height: 26px;
@@ -588,7 +591,7 @@ position: relative;
   border: none;
   text-align: center;
   right: 64px;
-  top: 63px;
+  top: 60px;
   margin: 0;
   padding: 0;
   z-index: 1;
@@ -608,7 +611,7 @@ position: relative;
   border: none;
   text-align: center;
   right: 64px;
-  top: 130px;
+  top: 127px;
   margin: 0;
   padding: 0;
   z-index: 1;
@@ -624,22 +627,26 @@ position: relative;
 }
 
 
-.map {}
+.map {
+  max-height: 593px;
+  margin-bottom: -120px;
+}
 .map-picture {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1200px;
-  max-height: 473px;
-  overflow: hidden;
   background-color: #ded9d3;
 }
 .main-footer {
+  position: absolute;
+  padding: 0px;
   display: flex;
   align-items: center;
+  width: 1200px;
   min-height: 120px;
 
-  background-color: #fdfdfd;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .footer-sedona {
   font-size: 21px;
@@ -676,15 +683,6 @@ position: relative;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/*.social-button-tw {
-  background-image: url(../img/icon-twitter.svg);
-}*/
-/*.social-button-fb {
-  background-image: url(../img/icon-facebook.svg);
-}
-.social-button-yt {
-  background-image: url(../img/icon-youtube.svg);
-}*/
 
 .footer-copyright {
   display: flex;
@@ -701,6 +699,7 @@ position: relative;
 }
 .footer-text {
   line-height: 26px;
+  margin-right: 8px;
 }
 .footer-icon {}
 
@@ -737,20 +736,12 @@ input:focus + label {
 
 /*Флексы фильтров*/
 
-.flex-filters {
-  display: flex;
-  padding: 0;
-  padding-top: 32px;
-  justify-content: space-between;
-  margin-bottom: 31px;
-}
 .filters-block {
   display: flex;
   flex-direction: column;
   width: 225px;
   padding: 0;
   margin: 0;
-  margin-left: 72px;
 }
 .filters-checkbox {
   display: flex;
@@ -760,22 +751,16 @@ input:focus + label {
 .filters-checkbox svg {
   margin-right: 12px;
 }
-/*не работает: хочу переназначить марджин нижнему чекбоксу со спаном с 23px на 31px*/
-.filters-block .margin-31 {
-  margin-bottom: 31px;
+.filters-block label:nth-child(4) {
+  margin-bottom: 0px;
 }
-.flex-filters-block {
-  display: flex;
-  justify-content: space-between;
-}
-
 .filters-block-display {
   display: flex;
   flex-direction: column;
   width: 330px;
   padding: 0;
   margin: 0;
-  margin-right: 72px;
+  margin-left: auto;
 }
 
 
@@ -788,10 +773,12 @@ input:focus + label {
 .catalog {
   display: flex;
   justify-content: space-between;
-  padding-left: 71px;
-  margin-bottom: 33px;
+  align-items: center;
+  padding-left: 72px;
+  padding-right: 72px;
   border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 33px
+  padding-bottom: 33px;
+  padding-top: 33px;
 }
 .flex-catalog {
   display: flex;
@@ -831,7 +818,8 @@ input:focus + label {
 /*Переопределение сортировки по убыванию и возрастанию*/
 .catalog-pointer {
   text-align: right;
-  padding-right: 73px;
+  margin-left: auto;
+  line-height: 0;
 }
 .pointer {
   display: flex;
@@ -851,53 +839,57 @@ input:focus + label {
 .pointer > li svg:active {
   fill: #81b3d2;
 }
-/*не работает*/
-.pointer.active {
-  color: #81b3d2;
+/*!!!!!!!не работает*/
+/*.pointer > li a svg {
+  fill: #81b3d2;
+}*/
+.pointer svg:last-child {
+  fill: #81b3d2;
 }
-
 /*Флексы для карточек товаров*/
 
 .flex-catalog-result {
   display: flex;
   justify-content:space-between;
-  padding: 0px;
   min-height: 90px;
-  margin-bottom: 30px;
   border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 23px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-left: 72px;
+  padding-right: 72px;
 }
-.catalog-result div:nth-child(3){
-  margin-bottom: 6px;
-}
+
 .flex-catalog-item {
   display: flex;
   justify-content: space-between;
   padding: 0px;
   margin: 0px;
-  padding-left: 72px;
-  min-height: 90px;
+  max-height: 90px;
 }
 .catalog-item {
   display: flex;
   flex-direction: column;
-  padding: 0px;
 }
 .catalog-title {
-
+  color: #000000;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-decoration: none;
 }
 .catalog-item-image {
   padding: 0px;
-  padding-right: 30px;
   margin: 0;
+  margin-right: 30px;
+  min-height: 90px;
 }
 
 .stars {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 .catalog-category {
   display: flex;
-  width: 258px;
+  max-width: 258px;
   justify-content: space-between;
   margin-bottom: 10px;
 }
@@ -928,34 +920,29 @@ input:focus + label {
   display: flex;
   width: 258px;
   justify-content: space-between;
-
 }
 
-.booking-button-blue > a:link {
+.booking-button-blue {
   width: 110px;
   min-height: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 6px;
   background-color: #81b3d2;
   color: #fff;
 }
 
-.booking-button-blue a:visited {
-  background-color: #81b3d2;
-  color: #fff;
+.booking-button-blue:hover {
+  background: #669ec0;
 }
-.booking-button-blue a:hover {
-  background-color: #669ec0;
-}
-.booking-button-blue a:active {
+
+.booking-button-blue:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd
 }
 
-
-
-.booking-button-brown > a:link {
+.booking-button-brown {
   width: 142px;
   min-height: 27px;
   display: flex;
@@ -965,28 +952,19 @@ input:focus + label {
   color: #fff;
 }
 
-.booking-button-brown a:visited {
-  background-color: #766357;
-  color: #fff;
-}
-.booking-button-brown a:hover {
+.booking-button-brown:hover {
   background-color: #604e43;
 }
-.booking-button-brown a:active {
+
+.booking-button-brown:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
 
-.blue {
-  background-color: #81b3d2;
-}
-.brown {
-  background-color: #766357;
-}
 .catalog-rate {
   text-align: right;
-  padding: 0px;
-  padding-right: 73px;
+  margin-left: auto;
+  line-height: 0;
 }
 
 /*Бегунок*/
@@ -1042,7 +1020,9 @@ input:focus + label {
 }
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
   padding-left: 65px;
 }
 .price-controls input {
