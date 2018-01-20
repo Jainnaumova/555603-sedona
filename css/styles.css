@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  width: 1200px;
+  min-width: 1200px;
   margin: 0 auto;
   padding: 0;
 
@@ -756,13 +756,37 @@ input[type="radio"].visually-hidden {
 
 
 /*Переопределение чекбоксов*/
+
+.filters-checkbox {
+  display: flex;
+  margin-bottom: 23px;
+  cursor: pointer;
+}
+.filters-checkbox svg {
+  margin-right: 14px;
+}
 .filters-checkbox svg:hover {
   fill: #ffffff;
 }
-.filters-checkbox svg:active{
+/* .filters-checkbox svg:active{
   fill: #6a6a6a;
+} */
+.filters-checkbox input[type="checkbox"]:checked + svg {
+  background: url("../img/checkbox-on.svg") no-repeat;
 }
-.checkbox {}
+
+.filters-checkbox input[type="checkbox"] + svg {
+  background: url("../img/checkbox-off.svg") no-repeat;
+}
+
+.filters-checkbox input[type="checkbox"]:disabled + svg {
+  background: url("../img/checkbox-on-disabled.svg") no-repeat;
+}
+
+.filters-checkbox input[type="checkbox"]:disabled + svg {
+  background: url("../img/checkbox-off-disabled.svg") no-repeat;
+}
+
 
 /*Флексы фильтров*/
 
@@ -772,14 +796,6 @@ input[type="radio"].visually-hidden {
   width: 255px;
   padding: 0;
   margin: 0;
-}
-.filters-checkbox {
-  display: flex;
-  margin-bottom: 23px;
-  cursor: pointer;
-}
-.filters-checkbox svg {
-  margin-right: 14px;
 }
 .filters-block label:nth-child(4) {
   margin-bottom: 0px;
