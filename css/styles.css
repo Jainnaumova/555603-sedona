@@ -327,7 +327,7 @@ position: relative;
 }
 /* Невидимый класс */
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden:
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
@@ -540,10 +540,12 @@ input[type="radio"].visually-hidden {
 
 .search-item-date-in .padding-13 {
   padding-left: 13px;
+  padding-right: 40px;
 }
 
 .search-item-date-out .padding-13 {
   padding-left: 13px;
+  padding-right: 40px;
 }
 .search-item-visitors {
   width: 460px;
@@ -602,6 +604,8 @@ input[type="radio"].visually-hidden {
   text-align: center;
   width: 42px;
   min-height: 38px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .submit-button {
@@ -787,6 +791,9 @@ input[type="radio"].visually-hidden {
   background: url("../img/checkbox-off-disabled.svg") no-repeat;
 }
 
+.filters-checkbox input[type="checkbox"]:focus + svg {
+  border-color: red;
+}
 
 /*Флексы фильтров*/
 
