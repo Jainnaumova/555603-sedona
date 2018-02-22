@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link href="./css/normalize.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
@@ -36,31 +35,44 @@
             ">
               <fieldset class="filters-block">
                 <legend class="filters-item">Инфраструктура:</legend>
-                <label class="filters-checkbox"><input type="checkbox" class="visually-hidden" name="pool" value="filter-1">
-                  <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
+
+                <input type="checkbox" class="visually-hidden" name="pool" value="filter-1" id="input-1">
+                <label class="filters-checkbox" for="input-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
                   <span class="catalog-category-type">Бассейн</span>
                 </label>
-                <label class="filters-checkbox"><input type="checkbox" class="visually-hidden" name="parking"  value="filter-2">
-                  <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
+
+                <input type="checkbox" class="visually-hidden" name="parking"  value="filter-2" id="input-2">
+                <label class="filters-checkbox" for="input-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
                   <span class="catalog-category-type">Парковка</span>
                 </label>
-                <label class="filters-checkbox"><input type="checkbox" class="visually-hidden" name="wi-fi" value="filter-3">
-                  <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
+
+                <input type="checkbox" class="visually-hidden" name="wi-fi" value="filter-3" id="input-3">
+                <label class="filters-checkbox" for="input-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
                   <span class="catalog-category-type">Wi-Fi</span>
                 </label>
+
               </fieldset>
+
               <fieldset class="filters-block">
                 <legend class="filters-item">Тип жилья</legend>
-                <label class="filters-checkbox"><input type="checkbox" class="visually-hidden" name="hotel" value="filter-4">
-                  <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
+                <input type="checkbox" class="visually-hidden" name="hotel" value="filter-4" id="input-4">
+                <label class="filters-checkbox" for="input-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
                   <span class="catalog-category-type">Гостиница</span>
                 </label>
-                <label class="filters-checkbox"><input type="checkbox" class="visually-hidden" name="motel" value="filter-5">
-                  <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
+
+                <input type="checkbox" class="visually-hidden" name="motel" value="filter-5" id="input-5">
+                <label class="filters-checkbox" for="input-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
                   <span class="catalog-category-type">Мотель</span>
                 </label>
-                <label class="filters-checkbox"><input type="checkbox" class="visually-hidden" name="apartments" value="filter-6">
-                  <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
+
+                <input type="checkbox" class="visually-hidden" name="apartments" value="filter-6" id="input-6">
+                <label class="filters-checkbox" for="input-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23"></svg>
                   <span class="catalog-category-type">Апартаменты</span>
                 </label>
               </fieldset>

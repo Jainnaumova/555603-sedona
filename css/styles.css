@@ -90,6 +90,7 @@ a:hover, a:visited, a:active a:focus {
   color: #000000;
 
   background-color: #ffffff;
+  max-width: 1200px;
 }
 .button {
   font: inherit;
@@ -286,7 +287,6 @@ a:hover, a:visited, a:active a:focus {
   background-color: #ffffff;
 }
 
-.main-navigation {}
 .main-header-logo {}
 
 
@@ -316,9 +316,11 @@ a:hover, a:visited, a:active a:focus {
 
 .left {
   text-align: left;
+  max-width: 100%;
 }
 .right {
   text-align: right;
+  max-width: 100%;
 }
 
 
@@ -327,9 +329,7 @@ position: relative;
 }
 /* Невидимый класс */
 
-.visually-hidden:
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -373,6 +373,7 @@ input[type="radio"].visually-hidden {
   padding-top: 62px;
   padding-bottom: 54px;
 }
+
 .about-slogan {
   font-size: 21px;
   line-height: 26px;
@@ -489,6 +490,8 @@ input[type="radio"].visually-hidden {
   width: 568px;
   min-height: 86px;
   padding: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
 
   background-color: #766357;
 }
@@ -508,7 +511,6 @@ input[type="radio"].visually-hidden {
 }
 
 .map-container {
-  position: relative;
 }
 .search-form {
   display: flex;
@@ -560,9 +562,11 @@ input[type="radio"].visually-hidden {
 }
 
 .search-item-date-in {
+  position: relative;
   margin-left: 20px;
 }
 .search-item-date-out {
+  position: relative;
   margin-left: 18px;
 }
 .search-item-adult {
@@ -618,6 +622,8 @@ input[type="radio"].visually-hidden {
   width: 458px;
   min-height: 58px;
   padding: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
 
   background-color: #81b3d2;
 }
@@ -626,8 +632,8 @@ input[type="radio"].visually-hidden {
   font-size: 0;
   border: none;
   text-align: center;
-  right: 64px;
-  top: 62px;
+  right: 10px;
+  top: 7px;
   margin: 0;
   padding: 0;
   z-index: 1;
@@ -646,8 +652,8 @@ input[type="radio"].visually-hidden {
   font-size: 0;
   border: none;
   text-align: center;
-  right: 64px;
-  top: 130px;
+  right: 10px;
+  top: 7px;
   margin: 0;
   padding: 0;
   z-index: 1;
@@ -674,6 +680,7 @@ input[type="radio"].visually-hidden {
   max-width: 1200px;
   background-color: #ded9d3;
 }
+
 .main-footer {
   position: absolute;
   padding: 0px;
@@ -775,30 +782,31 @@ input[type="radio"].visually-hidden {
 /* .filters-checkbox svg:active{
   fill: #6a6a6a;
 } */
-.filters-checkbox input[type="checkbox"]:checked + svg {
+input[type="checkbox"]:checked + .filters-checkbox svg {
   background: url("../img/checkbox-on.svg") no-repeat;
 }
 
-.filters-checkbox input[type="checkbox"] + svg {
+input[type="checkbox"] + .filters-checkbox svg {
   background: url("../img/checkbox-off.svg") no-repeat;
 }
 
-.filters-checkbox input[type="checkbox"]:disabled + svg {
+input[type="checkbox"]:disabled + .filters-checkbox svg {
   background: url("../img/checkbox-on-disabled.svg") no-repeat;
 }
 
-.filters-checkbox input[type="checkbox"]:disabled + svg {
+input[type="checkbox"]:disabled + .filters-checkbox svg {
   background: url("../img/checkbox-off-disabled.svg") no-repeat;
 }
 
-.filters-checkbox input[type="checkbox"]:focus + svg {
-  border-color: red;
+input[type="checkbox"]:focus + .filters-checkbox svg {
+  outline: 4px solid #81b3d2;
 }
 
 /*Флексы фильтров*/
 
 .filters-block {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   width: 255px;
   padding: 0;
@@ -843,12 +851,14 @@ input[type="radio"].visually-hidden {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  width: 165px;
+  min-width: 165px;
+  margin-right: 10px;
 
 
 }
 .catalog-sort {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 3px;
 
@@ -862,6 +872,7 @@ input[type="radio"].visually-hidden {
 }
 .catalog-sort-type {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   font-size: 12px;
   line-height: 18px;
@@ -940,6 +951,14 @@ input[type="radio"].visually-hidden {
   margin-right: 30px;
   min-height: 90px;
 }
+.img {
+  max-width: 100%;
+  height: auto;
+}
+.catalog-item-image img {
+  width: 135px;
+  height: 90px;
+}
 /*новые звезды*/
 .stars {
   margin-bottom: 39px;
@@ -949,8 +968,8 @@ input[type="radio"].visually-hidden {
 .catalog-rate {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: flex-end;
 }
 .stars-2 {
   min-width: 44px;
@@ -965,35 +984,34 @@ input[type="radio"].visually-hidden {
   min-height: 20px;
 }
 
-
-
 .catalog-category {
   display: flex;
-  max-width: 258px;
   justify-content: space-between;
   margin-bottom: 12px;
+  min-height: 27px;
 }
 .catalog-category-description {
-  display: flex;
-  align-items: center;
   color: #333333;
   text-align: left;
   width: 110px;
-  min-height: 27px;
+  word-wrap: break-word;
 }
 .item-cost {
   width: 142px;
-  text-align: left;
 }
+
 .catalog-rate div {
   padding-left: 15px;
 }
 .catalog-category-type {
+  display: block;
+  word-wrap: break-word;
   color: #ffffff;
+  white-space: normal;
   letter-spacing: 0.3px;
   text-transform: uppercase;
-  text-align: center;
-
+  text-align: left;
+  width: 200px;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -1004,13 +1022,15 @@ input[type="radio"].visually-hidden {
 }
 
 .booking-button-blue {
+  display: block;
+  word-wrap: break-word;
   width: 110px;
   min-height: 27px;
   font-weight: 700;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  margin-right: 6px;
+  text-align: center;
+  padding: 2px;
+  padding-top: 3px;
   background-color: #81b3d2;
   color: #fff;
 }
@@ -1025,12 +1045,15 @@ input[type="radio"].visually-hidden {
 }
 
 .booking-button-brown {
+  display: block;
+  word-wrap: break-word;
   width: 142px;
   min-height: 27px;
   font-weight: 700;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 2px;
+  padding-top: 3px;
   background-color: #766357;
   color: #fff;
 }
@@ -1162,6 +1185,8 @@ input[type="radio"].visually-hidden {
 }
 .btn-transparent {
   display: block;
+  word-wrap: break-word;
+  max-width: 140px;
   margin-left: 86px;
   padding: 6px;
   padding-left: 33px;
@@ -1201,12 +1226,15 @@ padding-bottom: 1px;
 .main-navigation {
   position: relative;
   padding: 0;
+
   margin: 0 72px;
 }
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  max-width: 1200px;
   margin: 0;
   margin-bottom: 16px;
   padding: 0;
